@@ -1,7 +1,16 @@
-ENV/
+# Ignore Python cache and virtual env
 __pycache__/
 *.pyc
+ENV/
+
+# VS Code settings (optional)
 .vscode/
+
+# Ignore raw and generated data
 data/resumes/
 data/job_descriptions/
 parsed/
+models/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
