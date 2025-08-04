@@ -1,0 +1,7 @@
+ENV/
+__pycache__/
+*.pyc
+.vscode/
+data/resumes/
+data/job_descriptions/
+parsed/
