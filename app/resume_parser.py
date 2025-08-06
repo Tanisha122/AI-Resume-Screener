@@ -1,5 +1,5 @@
 from pdfminer.high_level import extract_text
-import docx2txt
+from docx import Document
 import os
 
 def parse_resume(file_path):
@@ -26,7 +26,8 @@ def parse_resume(file_path):
     elif file_extension == '.docx':
         # Parse DOCX file
         try:
-            text = docx2txt.process(file_path)
+            doc = Document(file_path)
+            text = "\n".join([paragraph.text for paragraph in doc.paragraphs])
         except Exception as e:
             raise ValueError(f"Error parsing DOCX file: {e}")
     else:
